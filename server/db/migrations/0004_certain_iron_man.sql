@@ -1,0 +1,1 @@
+CREATE POLICY "session_participants_receive_broadcasts" ON "realtime"."messages" AS PERMISSIVE FOR SELECT TO "anon", "authenticated" USING ("realtime"."messages"."extension" = 'broadcast' and realtime.topic() ~ '^session:[0-9a-f-]{36}:[0-9a-f]{64}$');

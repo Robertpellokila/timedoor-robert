@@ -1,0 +1,1 @@
+ALTER TABLE "participants" ADD COLUMN "avatar" varchar(16) DEFAULT '🦊' NOT NULL;
